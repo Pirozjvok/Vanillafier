@@ -97,6 +97,25 @@ namespace Vanillafier
             TShockConfig tsConfig = TShock.Config;
             tsConfig.Settings.DefaultGuestGroupName = GroupName;
             tsConfig.Settings.DefaultRegistrationGroupName = GroupName;
+
+
+            //Update the TShock config file
+
+
+            tsConfig.Settings.SpawnProtection = false;
+            tsConfig.Settings.AnnounceSave = false;
+            tsConfig.Settings.DisableTombstones = false;
+            tsConfig.Settings.EnableChatAboveHeads = true;
+            tsConfig.Settings.TileKillThreshold = 200;
+            tsConfig.Settings.TilePlaceThreshold = 200;
+            tsConfig.Settings.TileLiquidThreshold = 200;
+            tsConfig.Settings.ProjectileThreshold = 200;
+            tsConfig.Settings.HealOtherThreshold = 200;
+            tsConfig.Settings.TilePaintThreshold = 200;
+            tsConfig.Settings.MaxDamage = 10000;
+            tsConfig.Settings.MaxProjDamage = 10000;
+            tsConfig.Settings.AllowIce = true;
+            tsConfig.Settings.AllowCutTilesAndBreakables = true;
             //Write the config file so that this change persists
             tsConfig.Write(TShockConfigPath);
 
